@@ -24,7 +24,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+  <link rel="icon" type="image/png" href="./assets/img/gundar.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css">
   <title>
     Dashboard Weather Station S475
   </title>
@@ -42,12 +44,13 @@
 </head>
 
 <body class="g-sidenav-show   bg-gray-100">
-  <div class="min-height-500 bg-primary position-absolute w-100"></div> 
+  <div class="min-height-500 position-absolute w-100" style="background-color:#FF9130"></div> 
   <main class="main-content position-relative border-radius-lg ">
     <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl " id="navbarBlur" data-scroll="false">
       <div class="container-fluid py-1 px-3">
         <nav aria-label="breadcrumb">
-          <h1 class="text-white">S475 Weather Station</h1> 
+          <img src="./assets/img/ugtechnopark.png" style="width:300px;height:120px;">
+          <h1 class="text-white">S475 Weather Station UG Techno Park</h1> 
           <h6 class="font-weight-bolder text-white mb-0">Unnamed Road, 66Q5+5WX, Jamali, Kec. Mande, Kabupaten Cianjur, Jawa Barat 43292, Indonesia UG Techno Park</h6>
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
@@ -87,7 +90,7 @@
                   <div class="numbers">
                     <p class="text-sm mb-0 text-uppercase font-weight-bold">Wind Speed</p>
                     <h3 class="font-weight-bolder">
-                      0.0 m/s
+                      0.8 m/s
                     </h3>
                     <a href="" style="font-size: 0.9em" data-bs-toggle="modal" data-bs-target="#windSpeedModal">See detail</a>
                   </div>
@@ -102,7 +105,7 @@
           </div>
           <!-- Modal -->
           <div class="modal fade" id="windSpeedModal" tabindex="-1" aria-labelledby="windSpeedModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
                   <h1 class="modal-title fs-5" id="windSpeedModalLabel">Wind Speed</h1>
@@ -111,48 +114,20 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <table class="table">
+                  <table id="tableWindSpeed" class="table table-striped" style="width:100%">
                     <thead>
-                      <tr>
-                        <th scope="col" class="text-center">Time</th>
-                        <th scope="col" class="text-center">Wind Speed</th>
-                      </tr>
+                        <tr>
+                            <th>Waktu</th>
+                            <th>Kecepatan</th>
+                        </tr>
                     </thead>
-                    <tbody>
-                      <tr>
-                        <td class="text-center">14.00</td>
-                        <td class="text-center">1.0 m/s</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">13.00</td>
-                        <td class="text-center">1.2 m/s</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">12.00</td>
-                        <td class="text-center">2.0 m/s</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">11.00</td>
-                        <td class="text-center">2.1 m/s</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">10.00</td>
-                        <td class="text-center">1.7 m/s</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">09.00</td>
-                        <td class="text-center">1.4 m/s</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">08.00</td>
-                        <td class="text-center">2.2 m/s</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">07.00</td>
-                        <td class="text-center">1.0 m/s</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                    <tfoot>
+                        <tr>
+                            <th>Waktu</th>
+                            <th>Kecepatan</th>
+                        </tr>
+                    </tfoot>
+                </table>
                 </div>
               </div>
             </div>
@@ -192,48 +167,20 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <table class="table">
+                <table id="tableWindDirection" class="table table-striped" style="width:100%">
                     <thead>
-                      <tr>
-                        <th scope="col" class="text-center">Time</th>
-                        <th scope="col" class="text-center">Wind Direction</th>
-                      </tr>
+                        <tr>
+                            <th>Waktu</th>
+                            <th>Arah</th>
+                        </tr>
                     </thead>
-                    <tbody>
-                      <tr>
-                        <td class="text-center">14.00</td>
-                        <td class="text-center">73°</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">13.00</td>
-                        <td class="text-center">80°</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">12.00</td>
-                        <td class="text-center">75°</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">11.00</td>
-                        <td class="text-center">79°</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">10.00</td>
-                        <td class="text-center">88°</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">09.00</td>
-                        <td class="text-center">81°</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">08.00</td>
-                        <td class="text-center">85°</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">07.00</td>
-                        <td class="text-center">88°</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                    <tfoot>
+                        <tr>
+                            <th>Waktu</th>
+                            <th>Arah</th>
+                        </tr>
+                    </tfoot>
+                </table>
                 </div>
               </div>
             </div>
@@ -273,48 +220,20 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <table class="table">
+                <table id="tableTemperature" class="table table-striped" style="width:100%">
                     <thead>
-                      <tr>
-                        <th scope="col" class="text-center">Time</th>
-                        <th scope="col" class="text-center">Temperature</th>
-                      </tr>
+                        <tr>
+                            <th>Waktu</th>
+                            <th>Celcius</th>
+                        </tr>
                     </thead>
-                    <tbody>
-                      <tr>
-                        <td class="text-center">14.00</td>
-                        <td class="text-center">34.1 °C</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">13.00</td>
-                        <td class="text-center">32.5 °C</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">12.00</td>
-                        <td class="text-center">31.1 °C</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">11.00</td>
-                        <td class="text-center">30.9 °C</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">10.00</td>
-                        <td class="text-center">28.8 °C</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">09.00</td>
-                        <td class="text-center">28.4 °C</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">08.00</td>
-                        <td class="text-center">27.7 °C</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">07.00</td>
-                        <td class="text-center">25.6 °C</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                    <tfoot>
+                        <tr>
+                            <th>Waktu</th>
+                            <th>Celcius</th>
+                        </tr>
+                    </tfoot>
+                </table>
                 </div>
               </div>
             </div>
@@ -354,48 +273,20 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <table class="table">
+                <table id="tableHumidity" class="table table-striped" style="width:100%">
                     <thead>
-                      <tr>
-                        <th scope="col" class="text-center">Time</th>
-                        <th scope="col" class="text-center">Humidity</th>
-                      </tr>
+                        <tr>
+                            <th>Waktu</th>
+                            <th>Persentase</th>
+                        </tr>
                     </thead>
-                    <tbody>
-                      <tr>
-                        <td class="text-center">14.00</td>
-                        <td class="text-center">54%</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">13.00</td>
-                        <td class="text-center">52%</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">12.00</td>
-                        <td class="text-center">48%</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">11.00</td>
-                        <td class="text-center">47%</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">10.00</td>
-                        <td class="text-center">43%</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">09.00</td>
-                        <td class="text-center">44%</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">08.00</td>
-                        <td class="text-center">42%</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">07.00</td>
-                        <td class="text-center">40%</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                    <tfoot>
+                        <tr>
+                            <th>Waktu</th>
+                            <th>Persentase</th>
+                        </tr>
+                    </tfoot>
+                </table>
                 </div>
               </div>
             </div>
@@ -417,7 +308,7 @@
                 </div>
                 <div class="col-4 text-end">
                   <div class="icon icon-shape bg-gradient-info shadow-info text-center rounded-circle">
-                    <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
+                    <i class="fa-solid fa-gauge-high" style="color: #ffffff; font-size: 24px;"></i>
                   </div>
                 </div>
               </div>
@@ -434,48 +325,20 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <table class="table">
+                <table id="tablePressure" class="table table-striped" style="width:100%">
                     <thead>
-                      <tr>
-                        <th scope="col" class="text-center">Time</th>
-                        <th scope="col" class="text-center">Pressure</th>
-                      </tr>
+                        <tr>
+                            <th>Waktu</th>
+                            <th>Tekanan</th>
+                        </tr>
                     </thead>
-                    <tbody>
-                      <tr>
-                        <td class="text-center">14.00</td>
-                        <td class="text-center">0.9642</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">13.00</td>
-                        <td class="text-center">0.9286</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">12.00</td>
-                        <td class="text-center">0.9734</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">11.00</td>
-                        <td class="text-center">0.9853</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">10.00</td>
-                        <td class="text-center">0.9.6931</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">09.00</td>
-                        <td class="text-center">0.9773</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">08.00</td>
-                        <td class="text-center">0.9935</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">07.00</td>
-                        <td class="text-center">0.9124</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                    <tfoot>
+                        <tr>
+                            <th>Waktu</th>
+                            <th>Tekanan</th>
+                        </tr>
+                    </tfoot>
+                </table>
                 </div>
               </div>
             </div>
@@ -490,7 +353,7 @@
                   <div class="numbers">
                     <p class="text-sm mb-0 text-uppercase font-weight-bold">Rainfall</p>
                     <h3 class="font-weight-bolder">
-                      0.00mm
+                      0.10mm
                     </h3>
                     <a href="" style="font-size: 0.9em" data-bs-toggle="modal" data-bs-target="#rainfallModal">See detail</a>
                   </div>
@@ -515,48 +378,20 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <table class="table">
+                <table id="tableRainfall" class="table table-striped" style="width:100%">
                     <thead>
-                      <tr>
-                        <th scope="col" class="text-center">Time</th>
-                        <th scope="col" class="text-center">Rainfall</th>
-                      </tr>
+                        <tr>
+                            <th>Waktu</th>
+                            <th>Milimeter</th>
+                        </tr>
                     </thead>
-                    <tbody>
-                      <tr>
-                        <td class="text-center">14.00</td>
-                        <td class="text-center">0.0mm</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">13.00</td>
-                        <td class="text-center">0.0mm</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">12.00</td>
-                        <td class="text-center">0.0mm</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">11.00</td>
-                        <td class="text-center">0.0mm</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">10.00</td>
-                        <td class="text-center">0.0mm</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">09.00</td>
-                        <td class="text-center">0.0mm</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">08.00</td>
-                        <td class="text-center">0.0mm</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">07.00</td>
-                        <td class="text-center">0.0mm</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                    <tfoot>
+                        <tr>
+                            <th>Waktu</th>
+                            <th>Milimeter</th>
+                        </tr>
+                    </tfoot>
+                </table>
                 </div>
               </div>
             </div>
@@ -571,7 +406,7 @@
                   <div class="numbers">
                     <p class="text-sm mb-0 text-uppercase font-weight-bold">Solar Radiaton</p>
                     <h3 class="font-weight-bolder">
-                      523
+                      523 W/m²
                     </h3>
                     <a href="" style="font-size: 0.9em" data-bs-toggle="modal" data-bs-target="#solarRadiationModal">See detail</a>
                   </div>
@@ -596,48 +431,20 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <table class="table">
+                <table id="tableSolarRadiation" class="table table-striped" style="width:100%">
                     <thead>
-                      <tr>
-                        <th scope="col" class="text-center">Time</th>
-                        <th scope="col" class="text-center">Solar Radiation</th>
-                      </tr>
+                        <tr>
+                            <th>Waktu</th>
+                            <th>W/m²</th>
+                        </tr>
                     </thead>
-                    <tbody>
-                      <tr>
-                        <td class="text-center">14.00</td>
-                        <td class="text-center">268</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">13.00</td>
-                        <td class="text-center">283</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">12.00</td>
-                        <td class="text-center">242</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">11.00</td>
-                        <td class="text-center">218</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">10.00</td>
-                        <td class="text-center">249</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">09.00</td>
-                        <td class="text-center">276</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">08.00</td>
-                        <td class="text-center">266</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">07.00</td>
-                        <td class="text-center">296</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                    <tfoot>
+                        <tr>
+                            <th>Waktu</th>
+                            <th>W/m²</th>
+                        </tr>
+                    </tfoot>
+                </table>
                 </div>
               </div>
             </div>
@@ -659,7 +466,7 @@
                 </div>
                 <div class="col-4 text-end">
                   <div class="icon icon-shape bg-gradient-warning shadow-warning text-center rounded-circle">
-                    <i class="ni ni-cart text-lg opacity-10" aria-hidden="true"></i>
+                    <i class="fa-brands fa-envira" style="color: #ffffff; font-size : 24px" aria-hidden="true"></i>
                   </div>
                 </div>
               </div>
@@ -676,48 +483,20 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <table class="table">
+                <table id="tablePARSensor" class="table table-striped" style="width:100%">
                     <thead>
-                      <tr>
-                        <th scope="col" class="text-center">Time</th>
-                        <th scope="col" class="text-center">PAR Sensor</th>
-                      </tr>
+                        <tr>
+                            <th>Waktu</th>
+                            <th>W/m²</th>
+                        </tr>
                     </thead>
-                    <tbody>
-                      <tr>
-                        <td class="text-center">14.00</td>
-                        <td class="text-center">320 w/m²</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">13.00</td>
-                        <td class="text-center">397 w/m²</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">12.00</td>
-                        <td class="text-center">315 w/m2</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">11.00</td>
-                        <td class="text-center">398 w/m²</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">10.00</td>
-                        <td class="text-center"> w/396m²</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">09.00</td>
-                        <td class="text-center">356 w/m²</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">08.00</td>
-                        <td class="text-center">377 w/m²</td>
-                      </tr>
-                      <tr>
-                        <td class="text-center">07.00</td>
-                        <td class="text-center">318 w/m²</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                    <tfoot>
+                        <tr>
+                            <th>Waktu</th>
+                            <th>W/m²</th>
+                        </tr>
+                    </tfoot>
+                </table>
                 </div>
               </div>
             </div>
@@ -1088,6 +867,35 @@
     </div>
   </div>
   <!--   Core JS Files   -->
+  <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+  <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+  <script>
+    new DataTable('#tableWindSpeed', {
+      ajax: 'data.txt'
+    });
+    new DataTable('#tableWindDirection', {
+      ajax: 'data.txt'
+    });
+    new DataTable('#tableTemperature', {
+      ajax: 'data.txt'
+    });
+    new DataTable('#tableHumidity', {
+      ajax: 'data.txt'
+    });
+    new DataTable('#tablePressure', {
+      ajax: 'data.txt'
+    });
+    new DataTable('#tableRainfall', {
+      ajax: 'data.txt'
+    });
+    new DataTable('#tableSolarRadiation', {
+      ajax: 'data.txt'
+    });
+    new DataTable('#tablePARSensor', {
+      ajax: 'data.txt'
+    });
+  </script>
   <script src="./assets/js/core/popper.min.js"></script>
   <script src="./assets/js/core/bootstrap.min.js"></script>
   <script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
@@ -1274,6 +1082,7 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="./assets/js/argon-dashboard.min.js?v=2.0.4"></script>
+  
 </body>
 
 </html>
