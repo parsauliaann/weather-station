@@ -97,7 +97,7 @@
     <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl " id="navbarBlur" data-scroll="false">
       <div class="container-fluid py-1 px-3">
         <nav aria-label="breadcrumb">
-          <img src="./assets/img/ugtechnopark.png" style="width:300px;height:120px;">
+          <img src="./assets/img/ugtechnopark.png" style="height:120px; object-fit: contain">
           <h1 class="text-white">S475 Weather Station UG Techno Park</h1> 
           <h6 class="font-weight-bolder text-white mb-0">Unnamed Road, 66Q5+5WX, Jamali, Kec. Mande, Kabupaten Cianjur, Jawa Barat 43292, Indonesia UG Techno Park</h6>
         </nav>
@@ -1065,7 +1065,7 @@
         maintainAspectRatio: false,
         plugins: {
           legend: {
-            display: false,
+            display: true,
           }
         },
         interaction: {
