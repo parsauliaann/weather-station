@@ -896,28 +896,28 @@
   <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
   <script>
     new DataTable('#tableWindSpeed', {
-      ajax: 'data.txt'
+      ajax: 'api/get_sensor_datas.php?parameter=wind_speed'
     });
     new DataTable('#tableWindDirection', {
-      ajax: 'data.txt'
+      ajax: 'api/get_sensor_datas.php?parameter=wind_direction'
     });
     new DataTable('#tableTemperature', {
-      ajax: 'data.txt'
+      ajax: 'api/get_sensor_datas.php?parameter=temperature'
     });
     new DataTable('#tableHumidity', {
-      ajax: 'data.txt'
+      ajax: 'api/get_sensor_datas.php?parameter=humidity'
     });
     new DataTable('#tablePressure', {
-      ajax: 'data.txt'
+      ajax: 'api/get_sensor_datas.php?parameter=pressure'
     });
     new DataTable('#tableRainfall', {
-      ajax: 'data.txt'
+      ajax: 'api/get_sensor_datas.php?parameter=rainfall'
     });
     new DataTable('#tableSolarRadiation', {
-      ajax: 'data.txt'
+      ajax: 'api/get_sensor_datas.php?parameter=solar_radiation'
     });
     new DataTable('#tablePARSensor', {
-      ajax: 'data.txt'
+      ajax: 'api/get_sensor_datas.php?parameter=par_sensor'
     });
   </script>
   <script src="./assets/js/core/popper.min.js"></script>
