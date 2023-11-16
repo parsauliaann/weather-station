@@ -5211,7 +5211,7 @@ fieldset:disabled .btn {
 
 .card-header {
   padding: var(--bs-card-cap-padding-y) var(--bs-card-cap-padding-x);
-  margin-bottom: 0;
+  margin-bottom: 5px;
   color: var(--bs-card-cap-color);
   background-color: var(--bs-card-cap-bg);
   border-bottom: var(--bs-card-border-width) solid var(--bs-card-border-color);
@@ -8407,7 +8407,7 @@ fieldset:disabled .btn {
 }
 
 .shadow-lg {
-  box-shadow: 0 8px 26px -4px rgba(20, 20, 20, 0.15), 0 8px 9px -5px rgba(20, 20, 20, 0.06) !important;
+  box-shadow: 17px 20px 19px 11px rgba(20, 20, 20, 0.15), 20px -20px 19px 11px rgba(20, 20, 20, 0.06)!important;
 }
 
 .shadow-xl {
@@ -21398,12 +21398,13 @@ fieldset:disabled .btn {
 
 .fixed-plugin .fixed-plugin-button {
   background: #fff;
-  border-radius: 50%;
-  bottom: 30px;
-  right: 30px;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  top: 30px;
+  left: 0;
   font-size: 1.25rem;
-  z-index: 990;
-  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.16);
+  z-index: 9999;
+  box-shadow: 0px 0px 9px 8px rgba(0, 0, 0, 0.16);
   cursor: pointer;
 }
 
@@ -21413,16 +21414,16 @@ fieldset:disabled .btn {
 
 .fixed-plugin .card {
   position: fixed !important;
-  right: -360px;
-  top: 0;
-  height: 100%;
-  left: auto !important;
+  left: -360px;
+  top: 100px;
+  height: 85%;
+  right: auto !important;
   transform: unset !important;
   width: 360px;
-  border-radius: 0;
+  border-radius: 10px;
   padding: 0 10px;
   transition: .2s ease;
-  z-index: 1020;
+  z-index: 9999;
 }
 
 .fixed-plugin .badge {
@@ -21454,7 +21455,7 @@ fieldset:disabled .btn {
 }
 
 .fixed-plugin.show .card {
-  right: 0;
+  left: 10px;
 }
 
 .input-group {
@@ -23129,6 +23130,7 @@ hr.horizontal.gray-light {
 
 .sidenav[data-color="primary"] .navbar-nav>.nav-item>.nav-link.active {
   background-image: linear-gradient(310deg, #5e72e4 0%, #5e72e4 100%);
+  border-radius:10px;
 }
 
 .sidenav[data-color="primary"] .navbar-nav>.nav-item>.nav-link.active .icon i,
@@ -23142,6 +23144,7 @@ hr.horizontal.gray-light {
 
 .sidenav[data-color="secondary"] .navbar-nav>.nav-item>.nav-link.active {
   background-image: linear-gradient(310deg, #8392ab 0%, #8392ab 100%);
+  border-radius:10px;
 }
 
 .sidenav[data-color="secondary"] .navbar-nav>.nav-item>.nav-link.active .icon i,
@@ -23155,6 +23158,7 @@ hr.horizontal.gray-light {
 
 .sidenav[data-color="success"] .navbar-nav>.nav-item>.nav-link.active {
   background-image: linear-gradient(310deg, #2dce89 0%, #2dce89 100%);
+  border-radius:10px;
 }
 
 .sidenav[data-color="success"] .navbar-nav>.nav-item>.nav-link.active .icon i,
@@ -23168,6 +23172,7 @@ hr.horizontal.gray-light {
 
 .sidenav[data-color="info"] .navbar-nav>.nav-item>.nav-link.active {
   background-image: linear-gradient(310deg, #11cdef 0%, #11cdef 100%);
+  border-radius: 10px;
 }
 
 .sidenav[data-color="info"] .navbar-nav>.nav-item>.nav-link.active .icon i,
@@ -23181,6 +23186,7 @@ hr.horizontal.gray-light {
 
 .sidenav[data-color="warning"] .navbar-nav>.nav-item>.nav-link.active {
   background-image: linear-gradient(310deg, #fb6340 0%, #fb6340 100%);
+  border-radius:10px;
 }
 
 .sidenav[data-color="warning"] .navbar-nav>.nav-item>.nav-link.active .icon i,
@@ -23194,6 +23200,7 @@ hr.horizontal.gray-light {
 
 .sidenav[data-color="danger"] .navbar-nav>.nav-item>.nav-link.active {
   background-image: linear-gradient(310deg, #f5365c 0%, #f5365c 100%);
+  border-radius:10px;
 }
 
 .sidenav[data-color="danger"] .navbar-nav>.nav-item>.nav-link.active .icon i,
@@ -23207,6 +23214,7 @@ hr.horizontal.gray-light {
 
 .sidenav[data-color="light"] .navbar-nav>.nav-item>.nav-link.active {
   background-image: linear-gradient(310deg, #e9ecef 0%, #e9ecef 100%);
+  border-radius:10px;
 }
 
 .sidenav[data-color="light"] .navbar-nav>.nav-item>.nav-link.active .icon i,
@@ -23220,6 +23228,7 @@ hr.horizontal.gray-light {
 
 .sidenav[data-color="dark"] .navbar-nav>.nav-item>.nav-link.active {
   background-image: linear-gradient(310deg, #344767 0%, #344767 100%);
+  border-radius:10px;
 }
 
 .sidenav[data-color="dark"] .navbar-nav>.nav-item>.nav-link.active .icon i,
@@ -23233,6 +23242,7 @@ hr.horizontal.gray-light {
 
 .sidenav[data-color="white"] .navbar-nav>.nav-item>.nav-link.active {
   background-image: linear-gradient(310deg, #fff 0%, #fff 100%);
+  border-radius:10px;
 }
 
 .sidenav[data-color="white"] .navbar-nav>.nav-item>.nav-link.active .icon i,

@@ -16,6 +16,7 @@
     exit();
   }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,9 +39,9 @@
   <script src="https://kit.fontawesome.com/b7f80dc676.js" crossorigin="anonymous"></script>
   <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- CSS Files -->
-  <link id="pagestyle" href="./assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
-    <title>Document</title>
+  <link id="pagestyle" href="./assets/css/argon-dashboard.css" rel="stylesheet" />
 </head>
+
 <body>
   <div class="min-height-300 bg-primary position-absolute w-100"></div>
   <aside class="sidenav bg-white navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-4 " id="sidenav-main">
@@ -523,7 +524,7 @@
           </div>
         </div>
       </div>
-      <footer class="footer pt-3  ">
+      <!-- <footer class="footer pt-3  ">
         <div class="container-fluid">
           <div class="row align-items-center justify-content-lg-between">
             <div class="col-lg-6 mb-lg-0 mb-4">
@@ -554,12 +555,12 @@
             </div>
           </div>
         </div>
-      </footer>
+      </footer> -->
     </div>
   </main>
   <div class="fixed-plugin">
     <a class="fixed-plugin-button text-dark position-fixed px-3 py-2">
-      <i class="fa fa-cog py-2"> </i>
+    <i class="fa-solid fa-bars" style="color: #1a9957;"></i>
     </a>
     <div class="card shadow-lg">
       <div class="card-header pb-0 pt-3 ">
@@ -567,14 +568,15 @@
           <h5 class="mt-3 mb-0">Argon Configurator</h5>
           <p>See our dashboard options.</p>
         </div>
-        <div class="float-end mt-4">
+        <!-- <div class="float-end mt-4">
           <button class="btn btn-link text-dark p-0 fixed-plugin-close-button">
-            <i class="fa fa-close"></i>
           </button>
-        </div>
+        </div> -->
         <!-- End Toggle Button -->
       </div>
       <hr class="horizontal dark my-1">
+      <a class="btn bg-gradient-dark w-100" href="dashboard.php">Dashboard</a>
+        <a class="btn btn-outline-dark w-100" href="tables.php">Table</a>
       <div class="card-body pt-sm-3 pt-0 overflow-auto">
         <!-- Sidebar Backgrounds -->
         <div>
@@ -614,8 +616,7 @@
             <input class="form-check-input mt-1 ms-auto" type="checkbox" id="dark-version" onclick="darkMode(this)">
           </div>
         </div>
-        <a class="btn bg-gradient-dark w-100" href="https://www.creative-tim.com/product/argon-dashboard">Free Download</a>
-        <a class="btn btn-outline-dark w-100" href="https://www.creative-tim.com/learning-lab/bootstrap/license/argon-dashboard">View documentation</a>
+        
         <div class="w-100 text-center">
           <a class="github-button" href="https://github.com/creativetimofficial/argon-dashboard" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star creativetimofficial/argon-dashboard on GitHub">Star</a>
           <h6 class="mt-3">Thank you for sharing!</h6>
